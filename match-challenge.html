@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<title>match answers</title>
+	<meta charset = "utf-8">
+</head>
+<body>
+	<button id="match" >Match</button>
+</body>
+<script>
+	mates = [
+		{name: 'Arnold', score:'0'},
+		{name: 'Bob', score:'0'},
+		{name: 'Charles', score:'0'},
+		{name: 'John', score:'0'}
+	];
+
+	meals = [
+		{	name: 'friet',
+			mates: [
+				{name: 'Arnold', answer: 'ok'},
+				{name: 'Bob', answer: 'love-it'},
+				{name: 'Charles', answer: 'love-it'},
+				{name: 'John', answer: 'hate-it'}
+			]},
+		{	name: 'pizza',
+			mates: [
+				{name: 'Arnold', answer: 'love-it'},
+				{name: 'Bob', answer: 'ok'},
+				{name: 'Charles', answer: 'love-it'},
+				{name: 'John', answer: 'ok'}
+			]},
+		{	name: 'curry',
+			mates: [
+				{name: 'Arnold', answer: 'love-it'},
+				{name: 'Bob', answer: 'hate-it'},
+				{name: 'Charles', answer: 'hate-it'},
+				{name: 'John', answer: 'ok'}
+			]},
+		{	name: 'stamppot',
+			mates: [
+				{name: 'Arnold', answer: 'love-it'},
+				{name: 'Bob', answer: 'ok'},
+				{name: 'Charles', answer: 'love-it'},
+				{name: 'John', answer: 'love-it'}
+			]},
+	];
+
+	let mate;
+	let lengte = meals.length;
+// answers corresponding with meals (i like or not)
+answers = [
+	'ok','love-it','love-it','hate-it'
+]
+
+function matchMealMate (){
+	for(i = lengte; i < meals.length; i++){
+  	    if(answers[i] == meals[i].mates[i].position){
+        console.log("je bent compitabel met " + mates[i].name[i].name);
+		  }
+}
+	// add property 'score'  for mates and set to zero
+	// Iterate through answers and corresponding meals
+		// per meal iterate through its mates
+			// if my-like for this meal is equal to the mealFriend its answers then
+				// find corresponding element in mates en increment its score
+	// sort mates on score
+}
+
+// call the match function
+matchMealMate();
+
+// console the resulting list of mates
+//console.dir(mates);
+
+console.dir(mates);
+
+
+
+</script>
+</html>
